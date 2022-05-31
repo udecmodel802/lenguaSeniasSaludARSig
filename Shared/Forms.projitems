@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>05baeb1e-03dd-4bdc-b0eb-07b2679d9db8</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Forms</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Screenshots -->
+    <None Include="$(MSBuildThisFileDirectory)Samples\Search\OfflineGeocode\OfflineGeocode.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Samples\Search\ReverseGeocode\ReverseGeocode.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Samples\Search\FindAddress\FindAddress.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Samples\Search\FindPlace\FindPlace.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Sample Code -->
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ArcGISLoginPrompt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\FileAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\SampleLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApiKeyPrompt.xaml.cs">
+      <DependentUpon>ApiKeyPrompt.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\IARSample.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\JoystickSlider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ItemToImageSourceConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\NullToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\ImageResourceExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Samples\Search\OfflineGeocode\OfflineGeocode.xaml.cs">
+      <DependentUpon>OfflineGeocode.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Samples\Search\ReverseGeocode\ReverseGeocode.xaml.cs">
+      <DependentUpon>ReverseGeocode.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Samples\Search\FindAddress\FindAddress.xaml.cs">
+      <DependentUpon>FindAddress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Samples\Search\FindPlace\FindPlace.xaml.cs">
+      <DependentUpon>FindPlace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Sample XAML -->
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\PictureMarkerSymbols\pin_blue.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Samples\Search\OfflineGeocode\OfflineGeocode.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Samples\Search\ReverseGeocode\ReverseGeocode.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Samples\Search\FindAddress\FindAddress.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Samples\Search\FindPlace\FindPlace.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <!-- Sample Manager Code -->
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SamplePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)WaitPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Include="$(MSBuildThisFileDirectory)WaitPage.xaml.cs">
+      <DependentUpon>WaitPage.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CategoryListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SampleListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)CategoryListPage.xaml.cs">
+      <DependentUpon>CategoryListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SampleListPage.xaml.cs">
+      <DependentUpon>SampleListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SamplePage.xaml.cs">
+      <DependentUpon>SamplePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\InsetConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\ResponsiveFormContainer.xaml.cs">
+      <DependentUpon>ResponsiveFormContainer.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\ResponsiveFormContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <!-- Misc Resources -->
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\PictureMarkerSymbols\pin_star_blue.png" />
+    <Folder Include="$(MSBuildThisFileDirectory)Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\routingSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\agol.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\delete.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\about.md">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\licenses.md">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\document.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\agolgrey.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\deletegrey.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\documentgrey.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\downloadgrey.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\infogrey.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\settingsgrey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ApiKeyPrompt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\key.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\SettingsPage\keygrey.png" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ArcGISRuntime.CategoryListPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:resources="clr-namespace:Forms.Resources;assembly=ArcGISRuntime"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Clicked="SettingsClicked"
+            IconImageSource="{x:OnPlatform Android={resources:ImageResource ArcGISRuntime.Resources.SettingsPage.settingsgrey.png},
+                                           iOS={resources:ImageResource ArcGISRuntime.Resources.SettingsPage.settings.png},
+                                           UWP={resources:ImageResource ArcGISRuntime.Resources.SettingsPage.settings.png}}"
+            Text="Settings" />
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <xct:MediaElement TranslationY="400" x:Name="mediaElement" Source="ms-appx:///AR_Inicio_Menu_F_01.mp4"
+                  ShowsPlaybackControls="True" />
+        <ListView
+            x:Name="SampleCategoriesList"
+            Grid.Row="1"
+            IsVisible="{Binding Path=IsCategoriesOpen}"
+            ItemTapped="OnItemTapped"
+            ItemsSource="{Binding Path=SampleCategories}"
+            SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView
+            x:Name="SampleSearchResultList"
+            Grid.Row="1"
+            IsVisible="{Binding Path=IsSearchOpen}"
+            ItemTapped="OnItemTapped"
+            ItemsSource="{Binding Path=SearchResults}"
+            SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding SampleName}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView
+            x:Name="SampleSearchResultList2"
+            Grid.Row="2"
+            SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Label>H</Label>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <pv:PancakeView HorizontalOptions="End" VerticalOptions="End" Margin="30" CornerRadius="10" Padding="15" TranslationY="10" WidthRequest="300">
+            <pv:PancakeView.BackgroundGradientStops>
+                <pv:GradientStopCollection>
+                    <pv:GradientStop Color="Orange" Offset="0"></pv:GradientStop>
+                    <pv:GradientStop Color="WhiteSmoke" Offset="1"></pv:GradientStop>
+                </pv:GradientStopCollection>
+            </pv:PancakeView.BackgroundGradientStops>
+            <xct:Expander HorizontalOptions="Center" VerticalOptions="End">
+                <xct:Expander.Header>
+                    <Image Source="Icon.png"></Image>
+                </xct:Expander.Header>
+            </xct:Expander>
+        </pv:PancakeView>
+    </Grid>
+</ContentPage>

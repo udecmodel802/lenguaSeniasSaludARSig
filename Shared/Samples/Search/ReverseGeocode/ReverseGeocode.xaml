@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:Forms.Resources;assembly=ArcGISRuntime" 
+             xmlns:pview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="ArcGISRuntimeXamarin.Samples.ReverseGeocode.ReverseGeocode"
+             BackgroundColor="#1C375C">
+    <Grid BackgroundColor="#1C375C">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <xct:MediaElement TranslationY="10" x:Name="mediaElement" Source="ms-appx:///SENAS1.mp4"
+                  ShowsPlaybackControls="True" />
+
+        <StackLayout BackgroundColor="#1C375C" Margin="0, 15, 15, 3" Grid.Row="1">
+                <Label Text="Información Centros de Salud"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" TextColor="White" FontSize="20"/>
+
+                <pview:PancakeView x:Name="pc" CornerRadius="40,0,0,40"
+                                   HeightRequest="55" BackgroundColor="White" 
+                                   Margin="15, 10, 15, 2">
+
+                    <Grid ColumnDefinitions="*,Auto" Padding="20,0">
+                        <Picker x:Name="CentroSaludSelector" Grid.Column="0" Title="Centros de Salud" 
+                                TextColor="Gray" FontSize="16" SelectedIndexChanged="CambioCentroSaludSelector">
+                            <Picker.Items>
+                                <x:String>Compensar Acueducto Centro Nariño</x:String>
+                                <x:String>Compensar Acueducto Santa Lucia</x:String>
+                                <x:String>Compensar Alamos</x:String>
+                                <x:String>Compensar Autopista Sur</x:String>
+                                <x:String>Compensar Avenida Primera De Mayo</x:String>
+                                <x:String>Compensar Calle 31 Sur</x:String>
+                                <x:String>Compensar Kennedy</x:String>
+                                <x:String>Compensar Venecia Calle 44 Sur</x:String>
+                                <x:String>UMHES TUNAL</x:String>
+                                <x:String>CAPS ABRAHAM LINCOLN</x:String>
+                                <x:String>CAPS SAN BENITO</x:String>
+                                <x:String>SEDE ADMINISTRATIVA NUEVO MUZU</x:String>
+                                <x:String>USS ISLA DEL SOL</x:String>
+                                <x:String>CAPS EL CARMEN</x:String>
+                                <x:String>USS MEDICINA INTERNA</x:String>
+                                <x:String>SEDE ADMINISTRATIVA TUNAL</x:String>
+                                <x:String>CAPS CANDELARIA</x:String>
+                                <x:String>CAPS ISMAEL PERDOMO</x:String>
+                                <x:String>CAPS VISTA HERMOSA</x:String>
+                                <x:String>USS CASA DE TEJA</x:String>
+                                <x:String>CENTRO JUVENIL - SALUD PUBLICA</x:String>
+                                <x:String>USS JERUSALEN</x:String>
+                                <x:String>USS LA ESTRELLA</x:String>
+                                <x:String>USS LIMONAR</x:String>
+                                <x:String>USS MANUELA BELTRAN</x:String>
+                                <x:String>USS MOCHUELO</x:String>
+                                <x:String>USS PARAISO</x:String>
+                                <x:String>USS PASQUILLA</x:String>
+                                <x:String>USS POTOSI</x:String>
+                                <x:String>USS SAN FRANCISCO</x:String>
+                                <x:String>USS SAN ISIDRO</x:String>
+                                <x:String>USS SIERRA MORENA</x:String>
+                                <x:String>UHMES MEISSEN</x:String>
+                                <x:String>CAPS BETANIA</x:String>
+                                <x:String>CAPS MARICHUELA</x:String>
+                                <x:String>USS DANUBIO AZUL</x:String>
+                                <x:String>USS DESTINO</x:String>
+                                <x:String>USS FLORA</x:String>
+                                <x:String>USS LORENZO ALCANTUZ</x:String>
+                                <x:String>USS REFORMA</x:String>
+                                <x:String>USS SANTA LIBRADA</x:String>
+                                <x:String>USS SANTA MARTA</x:String>
+                                <x:String>USS USME</x:String>
+                                <x:String>USS YOMASA</x:String>
+                                <x:String>USS NAZARETH</x:String>
+                                <x:String>USS SAN JUAN DE SUMAPAZ</x:String>
+                                <x:String>ECOTERAPIA</x:String>
+                        </Picker.Items>
+                        </Picker>
+                        <Label Grid.Column="1" VerticalOptions="Center" TextColor="Navy"></Label>
+                        <!--FontFamily="{StaticResource FontAwesomeSolid}" FontSize="20" HorizontalOptions="End"
+                           Text="{x:Static fontawesome:Solid.Angle_Down }"-->
+                    </Grid>
+                </pview:PancakeView>
+                <Button
+                    x:Name="MySuggestButton"
+                    Clicked="SuggestionButtonTapped"
+                    IsEnabled="false"
+                    Text="Buscar" 
+                    Margin="90, 5, 90, 2"
+                    TextColor="White"
+                    BackgroundColor="Orange"
+                    CornerRadius="20" HeightRequest="30"/>
+                <!--<ListView BackgroundColor="Red" Margin="25, 25, 25, 2" x:Name="lstCentrosSalud">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>-->
+            <Grid x:Name="tablaSeviciosCentroSalud" Margin="15, 10, 15, 2" ColumnSpacing="0" IsVisible="False">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="1.6*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="Servicio" Grid.Row="0" Grid.Column="0" TextColor="White" FontSize="Subtitle" HorizontalTextAlignment="Center"/>
+                                <Label Text="Existe Servicio en el &#10; Centro de Salud" Grid.Row="0" Grid.Column="1" TextColor="White" FontSize="Subtitle" HorizontalTextAlignment="Center"/>
+                                <Label Text="Medicina General" Grid.Row="1" Grid.Column="0" TextColor="White" BackgroundColor="#395378"/>
+                                <Label x:Name="tieneMedicinaGeneral" Text="Si" Grid.Row="1" Grid.Column="1" TextColor="White" BackgroundColor="#395378" HorizontalTextAlignment="Center"/>
+                                <Label Text="Urgencias" Grid.Row="2" Grid.Column="0" TextColor="White"/>
+                                <Label x:Name="tieneUrgencias" Text="Si" Grid.Row="2" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center"/>
+                                <Label Text="Odontologia" Grid.Row="3" Grid.Column="0" TextColor="White" BackgroundColor="#395378"/>
+                                <Label x:Name="tieneOdontologia" Text="Si" Grid.Row="3" Grid.Column="1" TextColor="White" BackgroundColor="#395378" HorizontalTextAlignment="Center"/>
+                                <Label Text="Medicina Familiar" Grid.Row="4" Grid.Column="0" TextColor="White"/>
+                                <Label x:Name="tieneMedicinaFamiliar" Text="No" Grid.Row="4" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center"/>
+                                <Label Text="Fonoaudiologia" Grid.Row="5" Grid.Column="0" TextColor="White" BackgroundColor="#395378"/>
+                                <Label x:Name="tieneFonoaudiologia" Text="Si" Grid.Row="5" Grid.Column="1" TextColor="White" BackgroundColor="#395378" HorizontalTextAlignment="Center"/>
+                                <Label Text="Mamografias" Grid.Row="6" Grid.Column="0" TextColor="White"/>
+                                <Label x:Name="tieneMamografias" Text="No" Grid.Row="6" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center"/>
+
+                                <Label Text="Psiquiatria" Grid.Row="7" Grid.Column="0" TextColor="White" BackgroundColor="#395378"/>
+                                <Label x:Name="tienePsiquiatria" Text="Si" Grid.Row="7" Grid.Column="1" TextColor="White" BackgroundColor="#395378" HorizontalTextAlignment="Center"/>
+                                <Label Text="Trabajo social" Grid.Row="8" Grid.Column="0" TextColor="White"/>
+                                <Label x:Name="tieneTrabajoSocial" Text="Si" Grid.Row="8" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center"/>
+                                <Label Text="Planificacion familiar" Grid.Row="9" Grid.Column="0" TextColor="White" BackgroundColor="#395378"/>
+                                <Label x:Name="tienePlanificacionFamiliar" Text="Si" Grid.Row="9" Grid.Column="1" TextColor="White" BackgroundColor="#395378" HorizontalTextAlignment="Center"/>
+                                <Label Text="Fisioterapia" Grid.Row="10" Grid.Column="0" TextColor="White"/>
+                                <Label x:Name="tieneFisioterapia" Text="No" Grid.Row="10" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center"/>
+                                <Label Text="Dirección" Grid.Row="11" Grid.Column="0" TextColor="Gray" BackgroundColor="White"/>
+                                <Label x:Name="txtDireccion"  Text="Trans 22 47B 51 Sur" Grid.Row="11" Grid.Column="1" TextColor="Gray" BackgroundColor="White" HorizontalTextAlignment="Center"/>
+                                <Label Text="Horario" Grid.Row="12" Grid.Column="0" TextColor="Gray" BackgroundColor="White"/>
+                                <Label x:Name="txtHorario" Text="6:00 a.m.-7:00 p.m." Grid.Row="12" Grid.Column="1" TextColor="Gray" BackgroundColor="White" HorizontalTextAlignment="Center"/>
+
+            </Grid>
+                            <!--</ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+            <Button
+                    x:Name="CopyButton2" Clicked="CopyButtonTapped2"
+                    IsEnabled="false" IsVisible="False"
+                    Text="Copiar Dirección" 
+                    Margin="90, 5, 90, 2" TextColor="White" BackgroundColor="Orange"
+                    CornerRadius="40" HeightRequest="30"/>
+            </StackLayout>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ArcGISRuntimeXamarin.Samples.OfflineGeocode.OfflineGeocode"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
+    xmlns:pview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    BackgroundColor="#1C375C">
+
+    <Grid BackgroundColor="#1C375C">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="1.2*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="7*" />
+        </Grid.RowDefinitions>
+        <Label Text="Registrar Información"
+                       HorizontalOptions="Center" Margin="15, 15, 15, 2"
+                       VerticalOptions="CenterAndExpand" TextColor="White" FontSize="Title"
+                       Grid.Row="0"/>
+        <Label x:Name="regitroUsuarioHecho"  Text=" "
+                       HorizontalOptions="Center" Margin="15, 3, 15, 2"
+                       VerticalOptions="Center" TextColor="White" FontSize="Small"
+                       Grid.Row="2"/>
+        <Image Source="Icon.png" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1"/>
+        <Entry x:Name="txtNombreUsuario" Placeholder="Nombres" Margin="15, 0, 15, 2" TextColor="White" 
+               PlaceholderColor="LightGray" Grid.Row="3"/>
+        <Entry x:Name="txtApellidosUsuario" Placeholder="Apellidos" Margin="15, 2, 15, 2" 
+               TextColor="White" PlaceholderColor="LightGray" Grid.Row="4"/>
+        <Entry x:Name="txtEdadUsuario" Placeholder="Edad" Margin="15, 2, 15, 0" TextColor="White" 
+               PlaceholderColor="LightGray" Grid.Row="5" MaxLength="2" Keyboard="Numeric"/>
+        <pview:PancakeView x:Name="pc" CornerRadius="40,0,0,40"
+                                   HeightRequest="55" BackgroundColor="White" 
+                                   Margin="20, 2, 20, 2" Grid.Row="6">
+        
+            <Grid ColumnDefinitions="*,Auto" Padding="10,0">
+                <Picker x:Name="EpsSelector"  Grid.Column="0" Title="EPS" TextColor="Gray">
+                    <Picker.Items>
+                        <x:String>Capital salud</x:String>
+                        <x:String>Sanitas</x:String>
+                        <x:String>Compensar</x:String>
+                        <x:String>Famisanar</x:String>
+                        <x:String>Nueva Eps</x:String>
+                        <x:String>Cafam</x:String>
+                        <x:String>Colsubsidio</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label x:Name="txtEpsUsuario" Grid.Column="1" VerticalOptions="Center" TextColor="Navy"></Label>
+                <!--FontFamily="{StaticResource FontAwesomeSolid}" FontSize="20" HorizontalOptions="End"
+                           Text="{x:Static fontawesome:Solid.Angle_Down }"-->
+            </Grid>
+        </pview:PancakeView>
+        <Button
+               x:Name="MySaveButtonUsuario" Clicked="SaveButtonTapped11"
+               IsEnabled="false" Text="Guardar" 
+               Margin="50, 30, 50, 2" TextColor="White"
+               BackgroundColor="Orange" CornerRadius="40"
+               Grid.Row="7"/>
+        <xct:MediaElement TranslationY="10" x:Name="mediaElement" Source="ms-appx:///XamarinForms101UsingEmbeddedImages1.mp4"
+                  ShowsPlaybackControls="True" Grid.Row="8"/>
+
+    </Grid>
+</ContentPage>
