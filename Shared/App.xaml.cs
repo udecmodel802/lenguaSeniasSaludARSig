@@ -23,10 +23,10 @@ namespace ArcGISRuntime
         {
 
             InitializeComponent();
-            // The root page of your application
+            // Página raíz de su aplicación
             var navigationPage = new NavigationPage(new CategoryListPage
             {
-                Title = "ArcGIS Runtime SDK for .NET"
+                Title = "AR SIG para usuarios de salud"
             });
 
             MainPage = navigationPage;
