@@ -7,7 +7,7 @@
 
 Esta solución usa tecnologías de sistemas de información geográfica (SIG) y de realidad aumentada "Outdoor" (AR), con el propósito de brindar información de servicios de salud a personas con discapacidad auditiva. El proyecto se desarrolla para dispositivos móviles Android.
 
-<img src="ImgReadme/MenuAplicacionSaludSigArLSC.png" width="330" height="198">
+<img src="ImgReadme/MenuAplicacionSaludSigArLSC.png" width="250" height="198">
 
 También, usa serviciós de ruteo y los muestra en la camara del celular usando realidad aumentada.
 
