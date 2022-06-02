@@ -4,6 +4,8 @@
 
 Esta solución usa tecnologías de sistemas de información geográfica (SIG) y de realidad aumentada (AR), con el propósito de brindar información de servicios de salud a personas con discapacidad auditiva. El proyecto se desarrolla para dispositivos móviles Android.
 
+![](ImgReadme/RutasRealidaAumentadaSaludSigArLSC.png)
+
 ## Layers
 
 * [ArcGIS map image layer](Shared/Samples/Layers/ArcGISMapImageLayerUrl/readme.md) - Add an ArcGIS Map Image Layer from a URL to a map.
