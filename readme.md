@@ -1,10 +1,28 @@
-# Tabla de Contenido
+# Contenido
 
-### Introducción
+- [Introducción](#introducción)
+- [Documentación Complementaria](#documentación-complementaria)
 
-Esta solución usa tecnologías de sistemas de información geográfica (SIG) y de realidad aumentada (AR), con el propósito de brindar información de servicios de salud a personas con discapacidad auditiva. El proyecto se desarrolla para dispositivos móviles Android.
+## Introducción
 
-![](ImgReadme/RutasRealidaAumentadaSaludSigArLSC.png)
+Esta solución usa tecnologías de sistemas de información geográfica (SIG) y de realidad aumentada "Outdoor" (AR), con el propósito de brindar información de servicios de salud a personas con discapacidad auditiva. El proyecto se desarrolla para dispositivos móviles Android.
+
+<img src="ImgReadme/MenuAplicacionSaludSigArLSC.png" width="330" height="198">
+
+También, usa serviciós de ruteo y los muestra en la camara del celular usando realidad aumentada.
+
+<img src="ImgReadme/RutasRealidaAumentadaSaludSigArLSC.png" width="330" height="198">
+
+La estructura del proyecto esta conformada por las siguentes partes: el framework de Xamarin Forms, el API de ArcGIS Runtime para .NET, el framework de realidad aumentada de ARCore, el uso de bases de datos de SQLite desarrollados e implementados para la plataforma de Android.
+
+## Documentación Complementaria
+
+[![Link: Toolkit Guide](https://img.shields.io/badge/%F0%9F%93%84-Toolkit%20Guide-633b9b?style=flat-square)](https://esri.github.io/arcgis-toolkit-dotnet/controls.html)
+[![Link: Toolkit API Reference (landing page)](https://img.shields.io/badge/Toolkit%20API%20Reference:-fff?style=flat-square)](https://esri.github.io/arcgis-toolkit-dotnet/api/index.html)
+[![Link: Toolkit API Reference - Forms](https://img.shields.io/badge/Xamarin.Forms-3498db?style=flat-square&labelColor=gray&logo=Xamarin)](https://esri.github.io/arcgis-toolkit-dotnet/api/netstd/index.html)
+[![Link: Toolkit API Reference - Android](https://img.shields.io/badge/Xamarin.Android-3ddc84?style=flat-square&labelColor=gray&logo=android)](https://esri.github.io/arcgis-toolkit-dotnet/api/android/index.html)
+
+
 
 ## Layers
 
