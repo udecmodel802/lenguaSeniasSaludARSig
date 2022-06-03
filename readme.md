@@ -50,7 +50,7 @@ Adicionalmente se debe configurar en el equipo de desarrollo en las variables de
 
 8- Finalmente cuando se corra la aplicación es necesario desde el dispositivo móvil activar los permisos de cámara y de ubicación.
 
-
+> **IMPORTANTE** Cuando ejecute el programa, deberá proporcionar una clave de API. Puede obtener una cuenta de desarrollador y una clave gratuitas en el [sitio web de ArcGIS Developers](developers.arcgis.com). Para mas información mirar https://links.esri.com/arcgis-runtime-security-auth.
 
 ## Documentación Complementaria
 
