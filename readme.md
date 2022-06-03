@@ -3,8 +3,9 @@
 <img src="ImgReadme/IconSaludSigArLSC.png" width="80" height="80">
 
 - [Introducción](#introducción)
-- [Documentación Complementaria](#documentación-complementaria)
 - [Recomendaciones y personalizaciones](#recomendaciones-y-personalizaciones)
+- [Documentación Complementaria](#documentación-complementaria)
+
 
 ## Introducción
 
