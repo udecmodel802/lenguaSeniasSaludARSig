@@ -61,27 +61,27 @@ Adicionalmente se debe configurar en el equipo de desarrollo en las variables de
 
 
 
-### Layers
+### Capas
 
 * [ArcGIS map image layer](Shared/Samples/Layers/ArcGISMapImageLayerUrl/readme.md) - Add an ArcGIS Map Image Layer from a URL to a map.
 * [ArcGIS tiled layer](Shared/Samples/Layers/ArcGISTiledLayerUrl/readme.md) - Load an ArcGIS tiled layer from a URL.
 * [ArcGIS vector tiled layer URL](Shared/Samples/Layers/ArcGISVectorTiledLayerUrl/readme.md) - Load an ArcGIS Vector Tiled Layer from a URL.
 
 
-### Location
+### Ubicación
 
 * [Display device location with autopan modes](Shared/Samples/Location/DisplayDeviceLocation/readme.md) - Display your current position on the map, as well as switch between different types of auto pan Modes.
 * [Set up location-driven Geotriggers](Shared/Samples/Location/LocationDrivenGeotriggers/readme.md) - Create a notification every time a given location data source has entered and/or exited a set of features or graphics.
 * [Display device location with NMEA data sources](Shared/Samples/Location/LocationWithNMEA/readme.md) - Parse NMEA sentences and use the results to show device location on the map.
 * [Show location history](Shared/Samples/Location/ShowLocationHistory/readme.md) - Display your location history on the map.
 
-### SceneView
+### Vista de escenas
 
 * [Animate images with image overlay](Shared/Samples/SceneView/AnimateImageOverlay/readme.md) - Animate a series of images with an image overlay.
 * [Choose camera controller](Shared/Samples/SceneView/ChooseCameraController/readme.md) - Control the behavior of the camera in a scene.
 * [GeoView viewpoint synchronization](Shared/Samples/SceneView/GeoViewSync/readme.md) - Keep the view points of two views (e.g. MapView and SceneView) synchronized with each other.
 
-### Search
+### Busquedas
 
 * [Find address](Shared/Samples/Search/FindAddress/readme.md) - Find the location for an address.
 * [Find place](Shared/Samples/Search/FindPlace/readme.md) - Find places of interest near a location or within a specific area.
