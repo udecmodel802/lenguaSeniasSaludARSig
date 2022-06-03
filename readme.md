@@ -88,5 +88,7 @@ Adicionalmente se debe configurar en el equipo de desarrollo en las variables de
 * [Find place](Shared/Samples/Search/FindPlace/readme.md) - Find places of interest near a location or within a specific area.
 
 
+## Licencia
 
-
+La librería de ArcToolkit de ArcGISRuntime, así como muchas de las librerías para Android tienen [licencia Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0), es por esta razón que se hace necesario describir de forma general esta licencia. 
+La licencia Apache 2.0 permite el uso software y código, si en el mismo se usan un aviso de advertencia en el cual se especifique los derechos de autor, ya sea en cada uno de archivos o en un archivo general, refiriéndose a que se hace uso a código de Apache Foundation o utiliza ciertos segmentos del código. Otros aspectos de la licencia son conservación de derechos de autor y la descargar responsabilidades, esta última se refiere a si llega a haber perjuicio en los servidores, perdía información o incidencia en las vulnerabilidades del software no tiene ninguna responsabilidad el proveedor del software. Además, es compatible con la versión 3 de la licencia GPL. V3 ya que no requiere instrucción del código fuente cuando se incluye modificaciones del software. En relación con las patentes de la licencia, se especifica que el software entregando puede contener patentes, faculta el uso del software más no permite tener propiedad de esas patentes. Finalmente, en la licencia se afirma que el software desprendo de la licencia Apache 2.0 puede nombrarse a otro tipo de licencia, siempre mención que en su momento fue una licencia Apache 2.0.
