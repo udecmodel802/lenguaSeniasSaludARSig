@@ -1,6 +1,6 @@
 # Contenido
 
-<img src="ImgReadme/IconSaludSigArLSC.png">
+<img src="ImgReadme/IconSaludSigArLSC.png" width="80" height="80">
 
 - [Introducción](#introducción)
 - [Documentación Complementaria](#documentación-complementaria)
