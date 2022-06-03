@@ -1,5 +1,7 @@
 # Contenido
 
+<img src="ImgReadme/IconSaludSigArLSC.png">
+
 - [Introducción](#introducción)
 - [Documentación Complementaria](#documentación-complementaria)
 - [Recomendaciones y personalizaciones](#recomendaciones-y-personalizaciones)
